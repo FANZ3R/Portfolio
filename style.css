@@ -39,7 +39,7 @@ html {
 body {
   background:  var(--bg);
   color:       var(--text);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lexend', sans-serif;
   font-weight: 300;
   cursor:      none;
   overflow-x:  hidden;
@@ -128,9 +128,8 @@ a {
   height:         100vh;
   display:        flex;
   flex-direction: column;
-  padding:        48px 32px;
+  padding:        90px 32px 48px;
   z-index:        100;
-  border-right:   1px solid var(--border);
   transition:     border-color 0.4s ease;
 }
 
@@ -142,10 +141,10 @@ a {
 }
 
 .nav-link {
-  font-size:      0.72rem;
+  font-size:      0.92rem;
   font-weight:    300;
   letter-spacing: 0.18em;
-  color:          var(--text-muted);
+  color: var(--text);
   padding:        5px 0;
   transition:     color 0.2s ease;
   position:       relative;
@@ -178,7 +177,7 @@ a {
 }
 
 .social-icon {
-  color:      var(--text-muted);
+  color: var(--text);
   display:    flex;
   align-items: center;
   transition: color 0.2s ease, transform 0.2s ease;
@@ -193,19 +192,32 @@ a {
   margin-top:     auto;
   font-size:      0.62rem;
   letter-spacing: 0.06em;
-  color:          var(--text-dim);
+  color: var(--text);
 }
 
 /* ============================================================
    MAIN CONTENT
    ============================================================ */
+/* ── LiquidEther background ── */
+#liquid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
 .content {
   margin-left: var(--sidebar-w);
+  position: relative;
+  z-index: 2;
 }
 
 .section {
   min-height: 100vh;
-  padding:    70px 80px 70px 80px;
+  padding:    70px 80px 70px 20px;
   position:   relative;
 }
 
@@ -217,7 +229,7 @@ a {
   font-size:      0.7rem;
   font-weight:    400;
   letter-spacing: 0.22em;
-  color:          var(--text-muted);
+  color: var(--text);
   margin-bottom:  14px;
 }
 
@@ -246,24 +258,27 @@ a {
    HOME SECTION
    ============================================================ */
 .section-home {
-  display:         flex;
-  flex-direction:  column;
-  justify-content: space-between;
-  padding-top:     80px;
+  padding-top: 80px;
+  min-height:  100vh;
 }
 
 .home-top {
   display:     grid;
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 50% 50%;
   gap:         40px;
-  align-items: stretch;
-  flex:        1;
-  min-height:  calc(100vh - 180px);
+  align-items: start;
+  min-height:  calc(100vh - 140px);
+}
+
+.hero-name-block {
+  display:        flex;
+  flex-direction: column;
+  min-height:     calc(100vh - 140px);
 }
 
 .hero-name {
-  font-family:    'Raleway', sans-serif;
-  font-weight:    200;
+  font-family:    'Lexend', sans-serif;
+  font-weight:    100;
   font-size:      clamp(3.8rem, 7.8vw, 7.2rem);
   line-height:    0.93;
   letter-spacing: 0.03em;
@@ -272,36 +287,39 @@ a {
 }
 
 .hero-role {
-  margin-top:     24px;
-  font-size:      1rem;
-  font-weight:    300;
-  letter-spacing: 0.08em;
-  color:          var(--text-muted);
+  margin-top:     28px;
+  font-family:    'Lexend', sans-serif;
+  font-size:      clamp(0.95rem, 1.3vw, 1.15rem);
+  font-weight:    200;
+  letter-spacing: 0.12em;
+  color:          var(--text);
 }
 
 .home-about {
   display:        flex;
   flex-direction: column;
-  justify-content: flex-end;  /* push block to bottom of right column */
-  padding-bottom: 20px;
+  padding-top:    clamp(300px, 37vh, 370px);
 }
 
 .home-about .block-label {
+  font-family:    'Lexend', sans-serif;
   color:          var(--text);
-  font-size:      0.9rem;
-  letter-spacing: 0.28em;
+  font-size:      1rem;
+  letter-spacing: 0.26em;
   margin-bottom:  18px;
 }
 
 .home-about .block-rule {
+  height:        2px;
+  background:    var(--text-muted);
   margin-bottom: 26px;
 }
 
 .home-about p {
-  font-size:     1rem;
-  line-height:   1.9;
+  font-size:     0.95rem;
+  line-height:   1.95;
   color:         #b8b8b8;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 [data-theme="light"] .home-about p {
@@ -309,24 +327,32 @@ a {
 }
 
 .home-contact {
-  padding-top:  44px;
-  border-top:   1px solid var(--border);
-  transition:   border-color 0.4s ease;
+  margin-top:  clamp(200px, 28vh, 280px);
+  padding-top: 0;
+  border-top:  none;
 }
 
 .contact-label {
-  font-size:      0.68rem;
+  font-family:    'Lexend', sans-serif;
+  font-size:      0.75rem;
+  font-weight:    300;
   letter-spacing: 0.22em;
-  color:          var(--text-muted);
+  color:          var(--text);
   margin-bottom:  10px;
 }
 
 .email-link {
-  font-size:   1rem;
-  font-weight: 300;
-  color:       var(--text);
-  letter-spacing: 0.02em;
-  transition:  opacity 0.2s ease;
+  font-family:    'Lexend', sans-serif;
+  font-size:      1rem;
+  font-weight:    300;
+  color:          var(--text);
+  letter-spacing: 0.04em;
+  transition:     color 0.2s ease, opacity 0.2s ease;
+}
+
+.email-link:hover {
+  color: var(--text);
+  opacity: 1;
 }
 
 .email-link:hover {
@@ -356,6 +382,7 @@ a {
   align-items:     center;
   justify-content: center;
   transition:      filter 0.4s ease;
+  will-change:     transform;
 }
 
 .project-item:hover .project-visual {
@@ -378,7 +405,7 @@ a {
 
 /* large faint bg text */
 .visual-bg-text {
-  font-family:    'Raleway', sans-serif;
+  font-family:    'Lexend', sans-serif;
   font-weight:    100;
   font-size:      clamp(3rem, 9vw, 8rem);
   letter-spacing: 0.35em;
@@ -448,26 +475,26 @@ a {
 .works-tag {
   font-size:      0.68rem;
   letter-spacing: 0.22em;
-  color:          var(--text-muted);
+  color: var(--text);
   font-weight:    400;
 }
 
 .works-handle {
   font-size:      0.68rem;
   letter-spacing: 0.1em;
-  color:          var(--text-dim);
+  color: var(--text);
 }
 
 .project-counter {
   display:        block;
   font-size:      0.78rem;
   letter-spacing: 0.14em;
-  color:          var(--text-muted);
+  color: var(--text);
   margin-bottom:  18px;
 }
 
 .project-title {
-  font-family:    'Raleway', sans-serif;
+  font-family:    'Lexend', sans-serif;
   font-weight:    200;
   font-size:      clamp(1.3rem, 2.8vw, 2.2rem);
   letter-spacing: 0.04em;
@@ -480,14 +507,14 @@ a {
 .project-type {
   font-size:      0.78rem;
   letter-spacing: 0.04em;
-  color:          var(--text-muted);
+  color: var(--text);
   margin-bottom:  28px;
 }
 
 .project-desc {
   font-size:   0.86rem;
   line-height: 1.85;
-  color:       var(--text-muted);
+  color: var(--text);
   max-width:   420px;
   margin-bottom: 28px;
 }
@@ -512,14 +539,14 @@ a {
   padding:        5px 13px;
   border:         1px solid var(--pill-border);
   border-radius:  20px;
-  color:          var(--text-muted);
+  color: var(--text);
   white-space:    nowrap;
   transition:     color 0.2s ease, border-color 0.2s ease;
 }
 
 .pill:hover {
   color:        var(--text);
-  border-color: var(--text-muted);
+  border-color: var(--text);
 }
 
 /* ============================================================
@@ -535,41 +562,58 @@ a {
   display:     grid;
   grid-template-columns: 1fr 1fr;
   gap:         60px;
-  align-items: flex-start;
+  align-items: stretch;
   margin-bottom: 80px;
 }
 
+.motivation-block {
+  display:        flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding:        40px 0;
+  max-width:      520px;
+}
+
 .motivation-block p {
-  font-size:     0.88rem;
-  line-height:   1.85;
-  color:         var(--text-muted);
-  margin-bottom: 10px;
+  font-size:     0.95rem;
+  line-height:   1.9;
+  color:         var(--text);
+  margin-bottom: 14px;
 }
 
 /* photo placeholder */
 .photo-placeholder {
-  height:          420px;
-  background:      var(--border);
-  display:         flex;
-  flex-direction:  column;
-  align-items:     center;
-  justify-content: center;
-  gap:             12px;
-  transition:      background 0.4s ease;
+  min-height: 480px;
+  height:     100%;
+  overflow:   hidden;
+}
+
+.profile-photo {
+  width:           100%;
+  height:          100%;
+  object-fit:      cover;
+  object-position: center 55%;
+  display:         block;
+  filter:          grayscale(100%);
+  transition:      filter 0.4s ease;
+}
+
+.profile-photo:hover {
+  filter: grayscale(60%);
 }
 
 .photo-initials {
-  font-family:    'Raleway', sans-serif;
+  font-family:    'Lexend', sans-serif;
   font-weight:    100;
   font-size:      3.5rem;
   letter-spacing: 0.25em;
-  color:          var(--text-dim);
+  color: var(--text);
 }
 
 .photo-note {
   font-size:      0.68rem;
   letter-spacing: 0.12em;
-  color:          var(--text-dim);
+  color: var(--text);
 }
 
 /* skills grid */
@@ -588,29 +632,28 @@ a {
   font-size:      0.7rem;
   font-weight:    400;
   letter-spacing: 0.2em;
-  color:          var(--text-muted);
+  color: var(--text);
   margin-bottom:  16px;
 }
 
 /* section nav arrows */
 .section-links {
-  display:        flex;
-  flex-direction: column;
-  align-items:    flex-end;
-  gap:            8px;
+  display:         flex;
+  justify-content: center;
+  padding:         60px 0;
 }
 
 .section-nav-link {
-  font-size:      1.1rem;
-  font-weight:    300;
-  letter-spacing: 0.1em;
-  color:          var(--text-muted);
-  transition:     color 0.2s ease, letter-spacing 0.2s ease;
+  font-size:      2rem;
+  font-weight:    500;
+  letter-spacing: 0.08em;
+  color:          var(--text);
+  transition:     letter-spacing 0.2s ease, opacity 0.2s ease;
 }
 
 .section-nav-link:hover {
-  color:          var(--text);
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
+  opacity:        0.75;
 }
 
 /* ============================================================
@@ -650,18 +693,18 @@ a {
 }
 
 .hobby-num {
-  font-family:    'Raleway', sans-serif;
+  font-family:    'Lexend', sans-serif;
   font-weight:    200;
   font-size:      0.72rem;
   letter-spacing: 0.1em;
-  color:          var(--text-dim);
+  color: var(--text);
   min-width:      24px;
 }
 
 .hobby-name {
   font-size:      0.9rem;
   font-weight:    300;
-  color:          var(--text-muted);
+  color: var(--text);
   letter-spacing: 0.04em;
   transition:     color 0.2s ease;
 }
@@ -684,14 +727,14 @@ a {
 
 .edu-school {
   font-size:   0.82rem;
-  color:       var(--text-muted);
+  color: var(--text);
   margin-bottom: 4px;
 }
 
 .edu-year {
   font-size:      0.72rem;
   letter-spacing: 0.06em;
-  color:          var(--text-dim);
+  color: var(--text);
 }
 
 /* closing */
@@ -703,7 +746,7 @@ a {
 }
 
 .closing-text {
-  font-family:    'Raleway', sans-serif;
+  font-family:    'Lexend', sans-serif;
   font-weight:    100;
   font-size:      clamp(1.6rem, 4vw, 3rem);
   letter-spacing: 0.22em;
@@ -715,7 +758,7 @@ a {
 .closing-sub {
   font-size:      0.75rem;
   letter-spacing: 0.12em;
-  color:          var(--text-dim);
+  color: var(--text);
 }
 
 /* ============================================================
@@ -779,6 +822,10 @@ a {
 
   .home-top {
     grid-template-columns: 1fr;
+  }
+
+  .hero-name-block {
+    padding-bottom: 0;
   }
 
   .project-item {

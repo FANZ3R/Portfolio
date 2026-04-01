@@ -6,7 +6,7 @@
   <title>Abhinav Bahuguna | AI/ML Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -24,8 +24,8 @@
   <nav class="sidebar">
     <div class="nav-links">
       <a href="#home"   class="nav-link" data-target="home">HOME</a>
-      <a href="#works"  class="nav-link" data-target="works">WORKS</a>
       <a href="#skills" class="nav-link" data-target="skills">SKILLS</a>
+      <a href="works.html" class="nav-link">WORKS</a>
       <a href="#about"  class="nav-link" data-target="about">ABOUT</a>
     </div>
 
@@ -65,201 +65,22 @@
     <section id="home" class="section section-home">
       <div class="home-top">
         <div class="hero-name-block">
-          <h1 class="hero-name">ABHINAV<br/>BAHUGUNA</h1>
-          <p class="hero-role">AI/ML Engineer &nbsp;/&nbsp; Data Scientist</p>
+          <div class="hero-text">
+            <h1 class="hero-name">ABHINAV<br/>BAHUGUNA</h1>
+            <p class="hero-role">AI/ML Engineer &nbsp;/&nbsp; Data Scientist</p>
+          </div>
+          <div class="home-contact fade-in">
+            <p class="contact-label">LET'S BUILD SOMETHING</p>
+            <a href="mailto:abhinav88bahuguna@gmail.com" class="email-link">abhinav88bahuguna@gmail.com</a>
+          </div>
         </div>
 
         <div class="home-about fade-in">
           <h3 class="block-label">ABOUT ME</h3>
           <div class="block-rule"></div>
-          <p>MTech Computer Science from IIIT Hyderabad (2023–25). Currently at Vipani.ai, where my Data Scientist title maps closely to what the industry calls an AI/ML Engineer.</p>
-          <p>I build end-to-end AI systems — production RAG pipelines, knowledge graph infrastructure, LLM integrations, and cloud-deployed APIs. Rooted in C++ and competitive programming, now deep in Python, LLMs, and modern AI infrastructure.</p>
-          <p>I care about systems that actually run in production, not just demos.</p>
+          <p>MTech Computer Science from IIIT Hyderabad (2023–25).<br>Currently at Vipani.ai, where my Data Scientist title maps closely to what the industry calls an AI/ML Engineer.<br>I build end-to-end AI systems — production RAG pipelines, knowledge graph infrastructure, LLM integrations, and cloud-deployed APIs.<br>Rooted in C++ and competitive programming, now deep in Python, LLMs, and modern AI infrastructure.<br>I care about systems that actually run in production, not just demos.<br>Outside work — football on the weekends, long treks in the mountains, and late nights on Counter-Strike.</p>
         </div>
       </div>
-
-      <div class="home-contact fade-in">
-        <p class="contact-label">LET'S BUILD SOMETHING</p>
-        <a href="mailto:abhinav88bahuguna@gmail.com" class="email-link">abhinav88bahuguna@gmail.com</a>
-      </div>
-    </section>
-
-    <!-- ── WORKS ─────────────────────────────────────────────── -->
-    <section id="works" class="section section-works">
-
-      <!-- Project 1 -->
-      <div class="project-item fade-in">
-        <div class="project-visual p1">
-          <div class="visual-grid-overlay"></div>
-          <span class="visual-bg-text">RAG</span>
-        </div>
-        <div class="project-meta">
-          <div class="meta-header">
-            <span class="works-tag">WORKS</span>
-            <span class="works-handle">/FANZ3R</span>
-          </div>
-          <span class="project-counter">[ 01 / 06 ]</span>
-          <h2 class="project-title">HYBRID RAG CHATBOT</h2>
-          <p class="project-type">Production System &nbsp;/&nbsp; AI Engineering</p>
-          <p class="project-desc">
-            Combines Neo4j knowledge graph (3.6M entities, 40M+ relationships) with Qdrant vector search
-            (145K+ embeddings via BAAI/bge-base-en-v1.5). Deployed via Docker on GCP with a FastAPI wrapper.
-            Optimised token utilisation from ~30% to ~75% of the context window. Explored agentic RAG
-            patterns: CRAG, Self-RAG, and ReAct.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Neo4j</span>
-            <span class="pill">Qdrant</span>
-            <span class="pill">FastAPI</span>
-            <span class="pill">Docker</span>
-            <span class="pill">GCP</span>
-            <span class="pill">LangGraph</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project-item fade-in">
-        <div class="project-visual p2">
-          <div class="visual-grid-overlay"></div>
-          <span class="visual-bg-text">KG</span>
-        </div>
-        <div class="project-meta">
-          <div class="meta-header">
-            <span class="works-tag">WORKS</span>
-            <span class="works-handle">/FANZ3R</span>
-          </div>
-          <span class="project-counter">[ 02 / 06 ]</span>
-          <h2 class="project-title">KG EXTRACTION PIPELINE</h2>
-          <p class="project-type">Production Pipeline &nbsp;/&nbsp; NLP</p>
-          <p class="project-desc">
-            Evolved from spaCy-based to LLM-based extraction via OpenRouter. Domain glossary filtering
-            reduced noise by ~47%. Extracts structured procurement knowledge from unstructured text
-            to populate the 40M+ relationship Neo4j knowledge graph.
-          </p>
-          <div class="pill-row">
-            <span class="pill">LLMs</span>
-            <span class="pill">spaCy</span>
-            <span class="pill">OpenRouter</span>
-            <span class="pill">Neo4j</span>
-            <span class="pill">Python</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project-item fade-in">
-        <div class="project-visual p3">
-          <div class="visual-grid-overlay"></div>
-          <span class="visual-bg-text">PDF</span>
-        </div>
-        <div class="project-meta">
-          <div class="meta-header">
-            <span class="works-tag">WORKS</span>
-            <span class="works-handle">/FANZ3R</span>
-          </div>
-          <span class="project-counter">[ 03 / 06 ]</span>
-          <h2 class="project-title">PDF DATA EXTRACTION</h2>
-          <p class="project-type">Client Project &nbsp;/&nbsp; AI Engineering &nbsp;·&nbsp; CoreGreen</p>
-          <p class="project-desc">
-            Extracts structured data from scanned PO and GRN PDFs using Gemini Flash 2.5 via OpenRouter.
-            Modular Python architecture with a FastAPI endpoint. Handles per-item GST calculation logic
-            for end-to-end procurement workflows.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Gemini 2.5 Flash</span>
-            <span class="pill">FastAPI</span>
-            <span class="pill">OpenRouter</span>
-            <span class="pill">Python</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="project-item fade-in">
-        <div class="project-visual p4">
-          <div class="visual-grid-overlay"></div>
-          <span class="visual-bg-text">BI</span>
-        </div>
-        <div class="project-meta">
-          <div class="meta-header">
-            <span class="works-tag">WORKS</span>
-            <span class="works-handle">/FANZ3R</span>
-          </div>
-          <span class="project-counter">[ 04 / 06 ]</span>
-          <h2 class="project-title">VENDOR REPORT SYSTEM</h2>
-          <p class="project-type">Automation &nbsp;/&nbsp; LLM Integration</p>
-          <p class="project-desc">
-            Produces multi-page PDF business intelligence reports from PO CSV data. LLM-generated
-            strategic recommendations via Gemini Flash Lite. Programmatic KPI &amp; chart computation,
-            DejaVu font bundling for &#8377; glyph support, and modular src/ package structure.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Gemini Flash Lite</span>
-            <span class="pill">PDF Generation</span>
-            <span class="pill">OpenRouter</span>
-            <span class="pill">Python</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 5 -->
-      <div class="project-item fade-in">
-        <div class="project-visual p5">
-          <div class="visual-grid-overlay"></div>
-          <span class="visual-bg-text">DATA</span>
-        </div>
-        <div class="project-meta">
-          <div class="meta-header">
-            <span class="works-tag">WORKS</span>
-            <span class="works-handle">/FANZ3R</span>
-          </div>
-          <span class="project-counter">[ 05 / 06 ]</span>
-          <h2 class="project-title">PROCUREMENT ANALYTICS</h2>
-          <p class="project-type">Data Engineering &nbsp;/&nbsp; Analytics</p>
-          <p class="project-desc">
-            Migrated pipeline from DuckDB/SQLite to ClickHouse. Set up PeerDB for
-            PostgreSQL-to-ClickHouse CDC via logical replication. Built a Streamlit dashboard
-            with a dark cinematic theme over a 269-table, 3,046-column, 421-FK source database.
-          </p>
-          <div class="pill-row">
-            <span class="pill">ClickHouse</span>
-            <span class="pill">PeerDB</span>
-            <span class="pill">PostgreSQL</span>
-            <span class="pill">Streamlit</span>
-            <span class="pill">pandas</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 6 -->
-      <div class="project-item fade-in">
-        <div class="project-visual p6">
-          <div class="visual-grid-overlay"></div>
-          <span class="visual-bg-text">CV</span>
-        </div>
-        <div class="project-meta">
-          <div class="meta-header">
-            <span class="works-tag">WORKS</span>
-            <span class="works-handle">/FANZ3R</span>
-          </div>
-          <span class="project-counter">[ 06 / 06 ]</span>
-          <h2 class="project-title">TEXT-CONDITIONED SEGMENTATION</h2>
-          <p class="project-type">Computer Vision &nbsp;/&nbsp; ML Research &nbsp;·&nbsp; Origin / 10xconstruction</p>
-          <p class="project-desc">
-            Drywall quality assurance via text-conditioned image segmentation. Evaluated CLIPSeg
-            fine-tuning and Grounded SAM 2. Achieved test mIoU of 0.5730 (taping area) and 0.4592
-            (cracks). CLIPSeg submitted as final version.
-          </p>
-          <div class="pill-row">
-            <span class="pill">CLIPSeg</span>
-            <span class="pill">SAM 2</span>
-            <span class="pill">PyTorch</span>
-            <span class="pill">Computer Vision</span>
-          </div>
-        </div>
-      </div>
-
     </section>
 
     <!-- ── SKILLS ─────────────────────────────────────────────── -->
@@ -276,8 +97,7 @@
         </div>
 
         <div class="photo-placeholder">
-          <span class="photo-initials">A.B.</span>
-          <p class="photo-note">photo coming soon</p>
+          <img src="geo 1 (1).JPEG" alt="Abhinav Bahuguna" class="profile-photo" />
         </div>
       </div>
 
@@ -291,11 +111,10 @@
               <span class="pill">LLMs</span>
               <span class="pill">RAG</span>
               <span class="pill">Knowledge Graphs</span>
-              <span class="pill">CLIPSeg</span>
-              <span class="pill">SAM 2</span>
-              <span class="pill">spaCy</span>
-              <span class="pill">scikit-learn</span>
-              <span class="pill">NumPy</span>
+              <span class="pill">Neural Networks</span>
+              <span class="pill">Deep Learning</span>
+              <span class="pill">Computer Vision</span>
+              <span class="pill">Agentic AI</span>
               <span class="pill">LangGraph</span>
               <span class="pill">LangChain</span>
             </div>
@@ -332,8 +151,7 @@
       </div>
 
       <div class="section-links fade-in">
-        <a href="#works" class="section-nav-link">WORKS &rarr;</a>
-        <a href="#about" class="section-nav-link">ABOUT &rarr;</a>
+        <a href="works.html" class="section-nav-link">View my work &rarr;</a>
       </div>
 
     </section>
@@ -371,7 +189,7 @@
         </div>
 
         <div class="education-block">
-          <h3 class="block-label">EDUCATION</h3>
+          <h3 class="block-label">BACKGROUND</h3>
           <div class="block-rule"></div>
 
           <div class="edu-item">
@@ -381,14 +199,14 @@
           </div>
 
           <div class="edu-item">
-            <p class="edu-degree">Self-Study</p>
-            <p class="edu-school">Andrew Ng's ML Course &nbsp;·&nbsp; StatQuest &nbsp;·&nbsp; Competitive Programming (LeetCode)</p>
+            <p class="edu-degree">Currently Exploring</p>
+            <p class="edu-school">Deep Learning &nbsp;&middot;&nbsp; CNNs &nbsp;&middot;&nbsp; Computer Vision &nbsp;&middot;&nbsp; MCP &nbsp;&middot;&nbsp; Agentic AI</p>
           </div>
 
           <div class="edu-item">
             <p class="edu-degree">AI/ML Engineer &nbsp;&mdash;&nbsp; Data Scientist</p>
             <p class="edu-school">Vipani.ai</p>
-            <p class="edu-year">2024 – Present</p>
+            <p class="edu-year">2025 – Present</p>
           </div>
         </div>
 
@@ -403,6 +221,8 @@
 
   </main>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="liquid-ether.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

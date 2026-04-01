@@ -544,7 +544,7 @@
    ============================================================ */
 const cursorEl = document.getElementById('cursor');
 let mouseX = 0, mouseY = 0, curX = 0, curY = 0;
-const EASE = 0.14;
+const EASE = 0.28;
 
 (function animateCursor() {
   curX += (mouseX - curX) * EASE;
@@ -616,15 +616,31 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 document.querySelectorAll('.project-item').forEach(item => {
   const visual = item.querySelector('.project-visual');
   if (!visual) return;
-  item.addEventListener('mouseenter', () => { visual.style.transition='transform 0.12s ease'; });
-  item.addEventListener('mousemove',  e => {
-    const r  = item.getBoundingClientRect();
-    const rx = (e.clientX - r.left) / r.width  - 0.5;
-    const ry = (e.clientY - r.top)  / r.height - 0.5;
-    visual.style.transform = `scale(1.025) translate(${rx*9}px, ${ry*9}px)`;
+
+  let rect   = null;
+  let rafId  = null;
+  let pendingRx = 0, pendingRy = 0;
+
+  item.addEventListener('mouseenter', () => {
+    rect = item.getBoundingClientRect(); // cache once on enter, not per-move
+    visual.style.transition = 'transform 0.15s ease';
   });
+
+  item.addEventListener('mousemove', e => {
+    pendingRx = (e.clientX - rect.left) / rect.width  - 0.5;
+    pendingRy = (e.clientY - rect.top)  / rect.height - 0.5;
+    if (rafId) return; // already scheduled this frame
+    rafId = requestAnimationFrame(() => {
+      rafId = null;
+      visual.style.transition = 'none'; // direct — no lag during movement
+      visual.style.transform = `scale(1.025) translate(${pendingRx * 9}px, ${pendingRy * 9}px)`;
+    });
+  });
+
   item.addEventListener('mouseleave', () => {
-    visual.style.transition='transform 0.55s ease';
-    visual.style.transform='scale(1) translate(0,0)';
+    rect = null;
+    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+    visual.style.transition = 'transform 0.55s ease';
+    visual.style.transform  = 'scale(1) translate(0,0)';
   });
 });
